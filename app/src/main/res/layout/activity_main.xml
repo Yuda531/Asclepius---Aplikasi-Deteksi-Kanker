@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deteksi_kanker"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:layout_marginTop="16dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:strokeColor="@color/primaryColor"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:id="@+id/previewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/image"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_place_holder" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/gallery"
+            app:cornerRadius="8dp"
+            style="@style/Widget.Material3.Button"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@color/white" />
+
+
+        <Button
+            android:id="@+id/analyzeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/analyze"
+            app:cornerRadius="8dp"
+            style="@style/Widget.Material3.Button"
+            android:backgroundTint="@color/secondaryColor"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
